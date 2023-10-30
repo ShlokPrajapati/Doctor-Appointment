@@ -1,0 +1,50 @@
+
+.hero {
+  display: flex;
+  height: 60vh;
+  width: 80%;
+  padding-top: 7rem !important;
+  margin: 0 auto;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.hero-content {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-img {
+  flex: 1;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 770px) {
+  .hero {
+    height: auto;
+  }
+  .hero,
+  .about {
+    flex-direction: column;
+  }
+  .hero-content {
+    margin-top: 2rem;
+    align-items: center;
+  }
+  .hero-content h1 {
+    text-align: center;
+  }
+  .about-heading {
+    margin-top: 4rem;
+  }
+}

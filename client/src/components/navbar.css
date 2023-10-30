@@ -1,0 +1,165 @@
+
+nav 
+{
+    position:fixed;
+    width:100%;
+    background-color: #6B7AA1;
+    height:50px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    font-size: 18px ;
+    z-index:1;
+}
+label.logo
+{
+    float:left !important;
+    color:black;
+    font-size:25px;
+    line-height: 50px;
+    margin-left:35px;
+}
+nav ul
+{
+    float:right;
+    margin-right:10px;
+}
+nav ul li
+{
+    display:inline-block;
+    line-height:50px;
+    margin:0 17px;
+}
+nav ul li a
+{
+    color:black;
+    text-decoration: none;
+}
+a:hover
+{
+    transition:all 0.5s;
+    color:white;
+}
+.checkbtn
+{
+    color:black;
+    float:right;
+    line-height:50px;
+    font-size:30px;
+    margin-right:25px;
+    cursor:pointer;
+    display:none;
+}
+.logo
+{
+    height:30px;
+    width:40px;
+    display:flex;
+    left:0;
+    justify-content: center;
+    align-items: center;
+}
+.logo img
+{
+    height:60%;
+    width:40px;
+    /* margin:0; */
+    margin-top: 1rem;
+}
+li .button
+{
+    padding:3px 23px;
+    background-color: white;
+    border-radius:5px;
+}
+li .button-btn:hover
+{
+    background-color: #F8F5F1;
+    color:#6B7AA1;
+    transition:all 0.5s;
+}
+li .button-btn
+{
+    padding:0px 20px;
+    
+    background-color: white;
+    border-radius:5px;
+}
+li .button:hover
+{
+    background-color: #F8F5F1;
+    color:#6B7AA1;
+    transition:all 0.5s;
+}
+#check
+{
+    display:none;
+}
+@media(max-width:750px)
+{
+    .checkbtn
+    {
+        display:block;
+    }
+    nav ul
+    {
+        position:fixed;
+        width:100%;
+        background-color:#6B7AA1;
+        top:50px;
+        left:-100%;
+        text-align: center;
+        transition:all 0.5s;
+        /* height:0;
+        display:none; */
+    }
+    nav ul li
+    {
+        display:block;
+    }
+    #check:checked ~ ul
+    {
+        left:0;
+        /* height:48%;
+        display:block; */
+    }
+    .menu-nav.show-menu {
+        width:250px;
+        transform: translateX(0px);
+        background-color:#6B7AA1;
+      }
+}
+
+
+.menu-nav {
+    list-style: none;
+    position: absolute;
+    background:white;
+    margin-top: 60px;
+    right: 0;
+    width: 0;
+    height:150px;
+    overflow: hidden;
+    max-width: 290px;
+    z-index: 9;
+    font-size: 15px;
+    padding:20px;
+    box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
+    transform: translateX(100px);
+    transition: transform ease-in-out 0.2s;
+  }
+
+  .menu-nav.show-menu {
+    width:250px;
+    transform: translateX(0px);
+    background-color:#6B7AA1;
+  }
+
+
+  .items p{
+    color:black;
+   
+  }
+  .items p:hover{
+    color:white;
+    transition:all 0.5s;
+  }
+
