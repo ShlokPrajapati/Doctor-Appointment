@@ -4,6 +4,13 @@ const dotenv=require("dotenv")
 const connectDB =require('./config/db')
 
 const app=express()
+const corsOptions = {
+    origin: 'https://doctor-appointment-five-gamma.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  };
+  
+  app.use(cors(corsOptions));
 //port
 const port= process.env.PORT || 5000
 //config dotenv
