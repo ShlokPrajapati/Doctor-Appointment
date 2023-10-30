@@ -24,6 +24,9 @@ app.use(morgan('dev'))
 
 
 app.use('/api/user',require('./routing/userrouting'))
+app.get('/',(req,res)=>{
+    res.send("Success")
+})
 //listening port
 app.listen(port,()=>
 {
