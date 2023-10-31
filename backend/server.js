@@ -11,7 +11,8 @@ const app=express()
 const corsOptions = {
     origin: 'https://doctor-appointment-five-gamma.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
   };
   
   app.use(cors(corsOptions));
