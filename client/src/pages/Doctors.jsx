@@ -13,7 +13,7 @@ const Doctors = () => {
   const getDoctorData = async (values) => {
     try {
       const res = await axios.post(
-        "/api/user/getdoctordata",
+        "https://doctorappointmentbackend-9mx3.onrender.com/api/user/getdoctordata",
         values
       );
       if (res.data.success) {

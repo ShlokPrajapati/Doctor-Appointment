@@ -17,7 +17,7 @@ const [flag,setFlag]=useState(false)
         try {
           console.log("first");
           console.log(user);
-          const res = await axios.post("/api/user/getappointmentdata", { user });
+          const res = await axios.post("https://doctorappointmentbackend-9mx3.onrender.com/api/user/getappointmentdata", { user });
           if (res.data.success) {
             console.log(res.data.appoint)
             setAppointmentdata(res.data.appoint)
@@ -35,7 +35,7 @@ const [flag,setFlag]=useState(false)
         try {
             console.log("first");
             console.log(data);
-            const res = await axios.post("/api/user/deleteappointment", { data });
+            const res = await axios.post("https://doctorappointmentbackend-9mx3.onrender.com/api/user/deleteappointment", { data });
             if (res.data.success) {
                 getdata()
             }

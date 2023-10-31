@@ -17,7 +17,7 @@ export default function Navbar() {
   const getUserData = async (values) => {
     try {
       const res = await axios.post(
-        "/api/user/getUserData",
+        "https://doctorappointmentbackend-9mx3.onrender.com/api/user/getUserData",
         {},
         {
           headers: {

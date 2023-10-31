@@ -15,7 +15,7 @@ const Login = () => {
   const onFinish = async (values) => {
     try {
       
-      const res = await axios.post("/api/user/login", values);
+      const res = await axios.post("https://doctorappointmentbackend-9mx3.onrender.com/api/user/login", values);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("swapIcons", true);

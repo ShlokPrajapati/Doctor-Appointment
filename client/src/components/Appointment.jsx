@@ -36,7 +36,7 @@ const Appointment = (props) => {
   const doctorDetail = async (id) => {
     try {
       console.log(id);
-      const res = await axios.post("/api/user/doctordetail", id);
+      const res = await axios.post("https://doctorappointmentbackend-9mx3.onrender.com/api/user/doctordetail", id);
       if (res.data.success) {
         console.log(res.data.doctor);
         setdoctordetail(res.data.doctor)
@@ -55,7 +55,7 @@ const Appointment = (props) => {
     try {
       console.log("first");
       console.log(user);
-      const res = await axios.post("/api/user/setData", user);
+      const res = await axios.post("https://doctorappointmentbackend-9mx3.onrender.com/api/user/setData", user);
       if (res.data.success) {
         message.success("Success");
         navigate('/doctors')

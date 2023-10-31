@@ -15,7 +15,7 @@ const Register = () => {
     try {
       
       if(regex.test(password)){
-      const res = await axios.post("/api/user/register", values);
+      const res = await axios.post("https://doctorappointmentbackend-9mx3.onrender.com/api/user/register", values);
  
       if (res.data.success) {
         message.success("Success");
