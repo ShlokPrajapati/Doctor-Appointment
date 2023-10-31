@@ -56,9 +56,7 @@ const registerControl = async (req, res) => {
 const homeControl = async (req, res) => {
   try {
     const user = await userModel.findOne({ _id: req.body.userId });
-    // const ahmd = await ahmed.find({})
-    // ahmd.json()
-    // console.log(JSON.stringify(ahmd))
+    console.log(user)
     if (!user) {
       return res
         .status(200)
@@ -72,7 +70,6 @@ const homeControl = async (req, res) => {
           email: user.email,
           id:user._id,
         },
-        // ahmd: ahmd
       });
     }
   } catch (error) {
