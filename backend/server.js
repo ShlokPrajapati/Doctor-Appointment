@@ -8,6 +8,7 @@ const homeAuth = require('./middlewares/homeAuth')
 const { doctorControl, doctordetailControl } = require('./controllers/doctorController')
 const { appointControl, showAppointment, deleteAppointment, updateAppointment } = require('./controllers/appointController')
 const app=express()
+dotenv.config()
 const corsOptions = {
     origin: 'https://doctor-appointment-five-gamma.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -19,7 +20,6 @@ const corsOptions = {
 //port
 const port= process.env.PORT || 5000
 //config dotenv
-dotenv.config()
 // MongoDb
 connectDB()
 app.use(express.json())
