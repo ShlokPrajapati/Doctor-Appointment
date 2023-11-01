@@ -13,7 +13,7 @@ const corsOptions = {
     origin: 'https://doctor-appointment-five-gamma.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    credentials: true,
   };
   
   app.use(cors(corsOptions));
@@ -32,15 +32,15 @@ app.get('/',(req,res)=>{
     res.send("Success")
 })
 
-app.post('api/user/login',loginControl)
-app.post('api/user/register',registerControl)
-app.post('api/user/getUserData',homeAuth,homeControl)
-app.post('api/user/getdoctordata',doctorControl)
-app.post('api/user/setData',appointControl)
-app.post('api/user/doctordetail',doctordetailControl)
-app.post('api/user/getappointmentdata',showAppointment)
-app.post('api/user/deleteappointment',deleteAppointment)
-app.post('api/user/updateappointment',updateAppointment)
+app.post('/api/user/login',loginControl)
+app.post('/api/user/register',registerControl)
+app.post('/api/user/getUserData',homeAuth,homeControl)
+app.post('/api/user/getdoctordata',doctorControl)
+app.post('/api/user/setData',appointControl)
+app.post('/api/user/doctordetail',doctordetailControl)
+app.post('/api/user/getappointmentdata',showAppointment)
+app.post('/api/user/deleteappointment',deleteAppointment)
+app.post('/api/user/updateappointment',updateAppointment)
 //listening port
 app.listen(port,()=>
 {
